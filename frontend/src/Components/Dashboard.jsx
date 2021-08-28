@@ -29,11 +29,10 @@ function Dashboard() {
 
   const handleLogout = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/logout", {
+      await axios.get("http://localhost:4000/logout", {
         withCredentials: true,
       });
       history.push("/");
-      console.log(res);
     } catch (e) {
       console.log(e.message);
     }
